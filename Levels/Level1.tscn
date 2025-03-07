@@ -1,13 +1,13 @@
 [gd_scene load_steps=9 format=4 uid="uid://bchshkco2jf6e"]
 
-[ext_resource type="Script" uid="uid://skslkoqhiuly" path="res://main.gd" id="1_3dxm6"]
-[ext_resource type="Texture2D" uid="uid://n1lpriwci7e0" path="res://tanks-terrain.png" id="1_uu6xs"]
-[ext_resource type="Script" uid="uid://c5jp0rheg78vx" path="res://path_follow_2d.gd" id="2_cm0pq"]
-[ext_resource type="Texture2D" uid="uid://kbfp354x4kyv" path="res://icon.svg" id="2_r0du0"]
-[ext_resource type="Texture2D" uid="uid://mffh87ls2b17" path="res://pixel-heart-2779422_1280.webp" id="4_cm0pq"]
+[ext_resource type="Script" uid="uid://skslkoqhiuly" path="res://scripts/main.gd" id="1_nutv8"]
+[ext_resource type="Texture2D" uid="uid://n1lpriwci7e0" path="res://Images/tanks-terrain.png" id="2_05pb0"]
+[ext_resource type="Script" uid="uid://c5jp0rheg78vx" path="res://scripts/path_follow_2d.gd" id="3_dl8mf"]
+[ext_resource type="Texture2D" uid="uid://kbfp354x4kyv" path="res://Images/icon.svg" id="4_xcayt"]
+[ext_resource type="Texture2D" uid="uid://mffh87ls2b17" path="res://Images/pixel-heart-2779422_1280.webp" id="5_5g41i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cm0pq"]
-texture = ExtResource("1_uu6xs")
+texture = ExtResource("2_05pb0")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 1:0/0 = 0
@@ -36,7 +36,7 @@ _data = {
 point_count = 19
 
 [node name="Main" type="Node2D"]
-script = ExtResource("1_3dxm6")
+script = ExtResource("1_nutv8")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAAAAAAAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAIAAQAAAAAAAAAAAAMAAQAAAAAAAAAAAAQAAQAAAAAAAAABAAQAAQAAAAAAAAACAAQAAQAAAAAAAAADAAQAAQAAAAAAAAAEAAQAAQAAAAAAAAAFAAQAAQAAAAAAAAAGAAQAAQAAAAAAAAAHAAQAAQABAAAAAAAIAAQAAQAAAAAAAAAIAAMAAQAAAAAAAAAIAAIAAQAAAAAAAAAIAAEAAQAAAAAAAAAIAAAAAQAAAAAAAAAHAAAAAQAAAAAAAAAGAAAAAQAAAAAAAAAFAAAAAQAAAAAAAAAEAAAAAQAAAAAAAAADAAAAAQAAAAAAAAACAAAAAQAAAAAAAAABAAAAAQABAAAAAAABAAEAAQABAAAAAAABAAIAAQAFAAEAAAACAAIAAQACAAAAAAACAAMAAQAAAAAAAAADAAMAAQAAAAAAAAADAAIAAQACAAAAAAAEAAIAAQACAAAAAAAFAAIAAQAEAAEAAAAGAAIAAQAAAAAAAAAGAAEAAQAAAAAAAAAFAAEAAQAAAAAAAAAEAAEAAQAAAAAAAAADAAEAAQAAAAAAAAACAAEAAQAAAAAAAAABAAMAAQAAAAAAAAAFAAMAAQAFAAEAAAAGAAMAAQACAAAAAAAHAAMAAQAEAAEAAAAHAAIAAQAAAAAAAAAHAAEAAQAAAAAAAAAEAAMAAQAAAAAAAAA=")
@@ -48,10 +48,10 @@ curve = SubResource("Curve2D_3dxm6")
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
 position = Vector2(191, 1)
 rotation = 1.55969
-script = ExtResource("2_cm0pq")
+script = ExtResource("3_dl8mf")
 
 [node name="Sprite2D" type="Sprite2D" parent="Path2D/PathFollow2D"]
-texture = ExtResource("2_r0du0")
+texture = ExtResource("4_xcayt")
 
 [node name="Label" type="Label" parent="."]
 custom_minimum_size = Vector2(10, 10)
@@ -65,4 +65,4 @@ theme_override_font_sizes/font_size = 32
 [node name="Pixel-heart-27794221280" type="Sprite2D" parent="."]
 position = Vector2(24, 25)
 scale = Vector2(0.0366699, 0.0382813)
-texture = ExtResource("4_cm0pq")
+texture = ExtResource("5_5g41i")

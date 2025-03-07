@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://drqkv5t7fc3gn"]
+
+[ext_resource type="Script" uid="uid://8hdhqwqpn5mg" path="res://scripts/spill.gd" id="1_7vrkn"]
+[ext_resource type="Script" uid="uid://ce1oci5pe1g56" path="res://scripts/avslutt.gd" id="2_fu7sn"]
+
+[node name="Main-menu" type="Node2D"]
+
+[node name="Spill" type="Button" parent="."]
+offset_left = 448.0
+offset_top = 282.0
+offset_right = 691.0
+offset_bottom = 358.0
+text = "Spill"
+script = ExtResource("1_7vrkn")
+
+[node name="Avslutt" type="Button" parent="."]
+offset_left = 448.0
+offset_top = 398.0
+offset_right = 694.0
+offset_bottom = 475.0
+text = "Avslutt"
+script = ExtResource("2_fu7sn")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 505.0
+offset_top = 191.0
+offset_right = 619.0
+offset_bottom = 214.0
+text = "FyrstikkTower!"
+
+[connection signal="pressed" from="Spill" to="Spill" method="_on_pressed"]
+[connection signal="pressed" from="Spill" to="Avslutt" method="_on_spill_pressed"]
+[connection signal="pressed" from="Avslutt" to="Avslutt" method="_on_pressed"]

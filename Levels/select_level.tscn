@@ -1,0 +1,61 @@
+[gd_scene load_steps=2 format=3 uid="uid://cog30weduplqc"]
+
+[ext_resource type="Script" uid="uid://cufg8cugppulf" path="res://scripts/level_1_button.gd" id="1_cbxu1"]
+
+[node name="SelectLevel" type="Node2D"]
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="GridContainer" type="GridContainer" parent="CenterContainer"]
+layout_mode = 2
+columns = 3
+
+[node name="Level1_button" type="Button" parent="CenterContainer/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+text = "1"
+script = ExtResource("1_cbxu1")
+
+[node name="Button" type="Button" parent="CenterContainer/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="CenterContainer/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="Button3" type="Button" parent="CenterContainer/GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+
+[node name="Button4" type="Button" parent="CenterContainer/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="Button5" type="Button" parent="CenterContainer/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="Button6" type="Button" parent="CenterContainer/GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+
+[node name="Button7" type="Button" parent="CenterContainer/GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+
+[node name="Button8" type="Button" parent="CenterContainer/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="."]
+offset_left = 540.0
+offset_top = 199.0
+offset_right = 615.0
+offset_bottom = 248.0
+text = "Velg nivå
+"
+
+[connection signal="pressed" from="CenterContainer/GridContainer/Level1_button" to="CenterContainer/GridContainer/Level1_button" method="_on_pressed"]
