@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=4 uid="uid://bchshkco2jf6e"]
+[gd_scene load_steps=10 format=4 uid="uid://bchshkco2jf6e"]
 
 [ext_resource type="Texture2D" uid="uid://n1lpriwci7e0" path="res://Images/tanks-terrain.png" id="2_05pb0"]
 [ext_resource type="Script" uid="uid://c03th1i1gg727" path="res://Levels/path_2d.gd" id="3_05pb0"]
 [ext_resource type="PackedScene" uid="uid://bra7gjsmww1om" path="res://Enemies/enemy_test.tscn" id="4_dl8mf"]
 [ext_resource type="Texture2D" uid="uid://mffh87ls2b17" path="res://Images/pixel-heart-2779422_1280.webp" id="5_5g41i"]
 [ext_resource type="Script" uid="uid://dhle58egxkl0p" path="res://Levels/label.gd" id="5_05pb0"]
+[ext_resource type="PackedScene" uid="uid://6ps7fjm0x6hq" path="res://tower.tscn" id="6_05pb0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cm0pq"]
 texture = ExtResource("2_05pb0")
@@ -62,3 +63,7 @@ script = ExtResource("5_05pb0")
 position = Vector2(24, 25)
 scale = Vector2(0.0366699, 0.0382813)
 texture = ExtResource("5_5g41i")
+
+[node name="Tower" parent="." instance=ExtResource("6_05pb0")]
+visible = false
+position = Vector2(236, 98)

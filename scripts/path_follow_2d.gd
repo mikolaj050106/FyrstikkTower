@@ -1,6 +1,7 @@
 extends PathFollow2D
 var speed = 150
 
+var enemyHealth = 1
 func _process(delta):
 	progress += speed * delta
 
