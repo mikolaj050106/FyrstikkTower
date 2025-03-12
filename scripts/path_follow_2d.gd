@@ -5,9 +5,11 @@ func _process(delta):
 	progress += speed * delta
 
 	if progress >= 1300:
-		var main = get_node("/root/Main")
-		main.health -= 5
-		get_node("/root/Main/Label").text = str(main.health)
-		if main.health <=0:
+		defines.health -= 5
+		defines.remaining_enemy -= 1
+		get_node("/root/Main/Label").text = str(defines.health)
+		if defines.health <=0:
 			get_node("/root/Main/Label").text = "Game over!"
 		queue_free()
+		if defines.remaining_enemy == 0:
+			defines.wave += 1

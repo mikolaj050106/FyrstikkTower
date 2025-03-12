@@ -1,10 +1,13 @@
 extends Path2D
 
-var enemycounttest = 3
+var enemycounttest = 6
 
 @export var enemy_scene: PackedScene  #enemy_scene er definert inne i inspektøren
 
 func _ready():
+	defines.remaining_enemy += enemycounttest 
+	print(enemycounttest)
+	print(defines.remaining_enemy)
 	spawn(enemycounttest)
 
 func spawn(enemycounttest):

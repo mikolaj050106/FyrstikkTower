@@ -14,3 +14,7 @@ config/name="FyrstikkTower"
 run/main_scene="uid://drqkv5t7fc3gn"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://Images/icon.svg"
+
+[autoload]
+
+defines="*res://defines.gd"
