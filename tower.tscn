@@ -1,3 +1,13 @@
-[gd_scene format=3 uid="uid://6ps7fjm0x6hq"]
+[gd_scene load_steps=3 format=3 uid="uid://6ps7fjm0x6hq"]
+
+[ext_resource type="Texture2D" uid="uid://c0q7dtwis4105" path="res://TowerSprites/New Piskel copy 2.png" id="1_k1sas"]
+[ext_resource type="Script" uid="uid://dulwty4wxul76" path="res://towerattack.gd" id="2_vedim"]
 
 [node name="Tower" type="Node2D"]
+
+[node name="NewPiskelCopy2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(83, 80)
+scale = Vector2(5, 5)
+texture = ExtResource("1_k1sas")
+script = ExtResource("2_vedim")
