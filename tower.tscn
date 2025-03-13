@@ -7,7 +7,7 @@
 
 [node name="NewPiskelCopy2" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(83, 80)
+position = Vector2(36, 254)
 scale = Vector2(5, 5)
 texture = ExtResource("1_k1sas")
 script = ExtResource("2_vedim")

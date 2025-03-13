@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://cff2oxfxbud73"]
+
+[ext_resource type="Script" uid="uid://86bqqvtnveju" path="res://towerbullet.gd" id="1_bn13a"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_sc7iy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nm6em"]
+size = Vector2(5, 5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_454kp"]
+size = Vector2(5, 5)
+
+[node name="Towerbullet" type="Node2D"]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+modulate = Color(0.517184, 0.517184, 0.517184, 1)
+rotation = -1.5708
+scale = Vector2(-3.6816, 1.74854)
+mesh = SubResource("CapsuleMesh_sc7iy")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_bn13a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("RectangleShape2D_nm6em")
+
+[node name="Area2D" type="Area2D" parent="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Area2D"]
+shape = SubResource("RectangleShape2D_454kp")
