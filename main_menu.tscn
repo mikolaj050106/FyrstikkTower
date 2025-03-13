@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://drqkv5t7fc3gn"]
+[gd_scene load_steps=5 format=3 uid="uid://drqkv5t7fc3gn"]
 
 [ext_resource type="Script" uid="uid://8hdhqwqpn5mg" path="res://scripts/spill.gd" id="1_7vrkn"]
 [ext_resource type="Script" uid="uid://ce1oci5pe1g56" path="res://scripts/avslutt.gd" id="2_fu7sn"]
+[ext_resource type="Texture2D" uid="uid://dj6vi83id48ld" path="res://Images/lobby bakgrunn.png" id="3_fu7sn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jix8l"]
+bg_color = Color(0.25, 0.25, 0.25, 1)
 
 [node name="Main-menu" type="Node2D"]
 
@@ -10,6 +14,17 @@ offset_left = 448.0
 offset_top = 282.0
 offset_right = 691.0
 offset_bottom = 358.0
+theme_override_styles/focus = SubResource("StyleBoxFlat_jix8l")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_jix8l")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_jix8l")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_jix8l")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_jix8l")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_jix8l")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jix8l")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_jix8l")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jix8l")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_jix8l")
+theme_override_styles/normal = SubResource("StyleBoxFlat_jix8l")
 text = "Spill"
 script = ExtResource("1_7vrkn")
 
@@ -18,6 +33,17 @@ offset_left = 448.0
 offset_top = 398.0
 offset_right = 694.0
 offset_bottom = 475.0
+theme_override_styles/focus = SubResource("StyleBoxFlat_jix8l")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_jix8l")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_jix8l")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_jix8l")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_jix8l")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_jix8l")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jix8l")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_jix8l")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jix8l")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_jix8l")
+theme_override_styles/normal = SubResource("StyleBoxFlat_jix8l")
 text = "Avslutt"
 script = ExtResource("2_fu7sn")
 
@@ -27,6 +53,12 @@ offset_top = 191.0
 offset_right = 619.0
 offset_bottom = 214.0
 text = "FyrstikkTower!"
+
+[node name="LobbyBakgrunn" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(576, 324)
+scale = Vector2(36, 20.25)
+texture = ExtResource("3_fu7sn")
 
 [connection signal="pressed" from="Spill" to="Spill" method="_on_pressed"]
 [connection signal="pressed" from="Spill" to="Avslutt" method="_on_spill_pressed"]

@@ -18,3 +18,7 @@ config/icon="res://Images/icon.svg"
 [autoload]
 
 defines="*res://defines.gd"
+
+[display]
+
+window/stretch/mode="canvas_items"
