@@ -1,6 +1,29 @@
-[gd_scene load_steps=2 format=3 uid="uid://cog30weduplqc"]
+[gd_scene load_steps=15 format=3 uid="uid://cog30weduplqc"]
 
 [ext_resource type="Script" uid="uid://cufg8cugppulf" path="res://scripts/level_1_button.gd" id="1_cbxu1"]
+[ext_resource type="Texture2D" uid="uid://clb3w4gkwgp6p" path="res://Images/93634.png" id="2_4dbvg"]
+[ext_resource type="Script" uid="uid://dri5joahy4vjn" path="res://Levels/button.gd" id="3_7yrxk"]
+[ext_resource type="Texture2D" uid="uid://dj6vi83id48ld" path="res://Images/lobby bakgrunn.png" id="4_2njtx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7yrxk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2njtx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jk6ke"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7j844"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gneh8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_244ny"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5ioi1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cl7xr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t6ylr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4dbvg"]
 
 [node name="SelectLevel" type="Node2D"]
 
@@ -58,4 +81,29 @@ offset_bottom = 248.0
 text = "Velg nivå
 "
 
+[node name="Button" type="Button" parent="."]
+offset_right = 69.0
+offset_bottom = 69.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7yrxk")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_2njtx")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_jk6ke")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_7j844")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_gneh8")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_244ny")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_5ioi1")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_cl7xr")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_t6ylr")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4dbvg")
+icon = ExtResource("2_4dbvg")
+expand_icon = true
+script = ExtResource("3_7yrxk")
+
+[node name="LobbyBakgrunn" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(576, 324)
+scale = Vector2(36, 20.25)
+texture = ExtResource("4_2njtx")
+
 [connection signal="pressed" from="CenterContainer/GridContainer/Level1_button" to="CenterContainer/GridContainer/Level1_button" method="_on_pressed"]
+[connection signal="pressed" from="Button" to="CenterContainer/GridContainer/Level1_button" method="_on_button_pressed"]
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

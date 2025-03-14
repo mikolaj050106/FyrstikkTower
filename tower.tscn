@@ -1,9 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://6ps7fjm0x6hq"]
 
 [ext_resource type="Texture2D" uid="uid://c0q7dtwis4105" path="res://TowerSprites/New Piskel copy 2.png" id="1_k1sas"]
+<<<<<<< HEAD
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k1sas"]
 size = Vector2(104, 41.2281)
+=======
+[ext_resource type="Script" path="res://towerattack.gd" id="2_vedim"]
+>>>>>>> refs/remotes/origin/main
 
 [node name="Tower" type="Node2D"]
 position = Vector2(575, 317)
