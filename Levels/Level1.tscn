@@ -5,12 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://bra7gjsmww1om" path="res://Enemies/enemy_test.tscn" id="4_dl8mf"]
 [ext_resource type="Texture2D" uid="uid://mffh87ls2b17" path="res://Images/pixel-heart-2779422_1280.webp" id="5_5g41i"]
 [ext_resource type="Script" uid="uid://dhle58egxkl0p" path="res://Levels/label.gd" id="5_05pb0"]
-<<<<<<< HEAD
-[ext_resource type="Texture2D" uid="uid://c0q7dtwis4105" path="res://TowerSprites/New Piskel copy 2.png" id="6_05pb0"]
-=======
 [ext_resource type="PackedScene" uid="uid://6ps7fjm0x6hq" path="res://tower.tscn" id="6_05pb0"]
 [ext_resource type="Script" uid="uid://s6xafn3qg27b" path="res://Levels/label_2.gd" id="7_dl8mf"]
->>>>>>> refs/remotes/origin/main
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cm0pq"]
 texture = ExtResource("2_05pb0")
@@ -70,17 +66,6 @@ position = Vector2(24, 25)
 scale = Vector2(0.0366699, 0.0382813)
 texture = ExtResource("5_5g41i")
 
-<<<<<<< HEAD
-[node name="Button" type="Button" parent="."]
-texture_filter = 1
-offset_left = 1047.0
-offset_top = 18.0
-offset_right = 1087.0
-offset_bottom = 58.0
-scale = Vector2(2.27183, 2.27183)
-keep_pressed_outside = true
-icon = ExtResource("6_05pb0")
-=======
 [node name="Tower" parent="." instance=ExtResource("6_05pb0")]
 position = Vector2(236, 98)
 
@@ -90,4 +75,3 @@ offset_top = 1.0
 offset_right = 1152.0
 offset_bottom = 24.0
 script = ExtResource("7_dl8mf")
->>>>>>> refs/remotes/origin/main
